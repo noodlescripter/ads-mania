@@ -1,0 +1,60 @@
+
+
+<div class="container is-fluid mt-4 shadow" max-height="50px">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" id="fixedHeight">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="assets/photo1.jpg" class="d-block w-100" alt="..." style="max-width: 100%; height: auto;"
+                >
+                <% if(!currentUser) {%>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Want to Post Ads Like this?</h5>
+                        <!-- There is has to be a condition (if user is logged in!!) -->
+                        <a href="#" class="btn btn-primary btn-lg">Sign Up</a>
+                    </div>
+                    <% } %>
+            </div>
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="assets/photo2.jpg" class="d-block " alt="..." style="width: 100%; height: auto;"
+                >
+                <% if(!currentUser) {%>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Want to Post Ads Like this?</h5>
+                        <!-- There is has to be a condition (if user is logged in!!) -->
+                        <a href="#" class="btn btn-primary btn-lg">Sign Up</a>
+                    </div>
+                    <% } %>
+            </div>
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="assets/photo3.jpg" class="d-block " alt="..." style="max-width: 100%; height: auto;"
+                >
+                <% if(!currentUser) {%>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Want to Post Ads Like this?</h5>
+                        <!-- There is has to be a condition (if user is logged in!!) -->
+                        <a href="#" class="btn btn-primary btn-lg">Sign Up</a>
+                    </div>
+                    <% } %>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>

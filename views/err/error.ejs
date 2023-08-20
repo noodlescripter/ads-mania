@@ -1,0 +1,11 @@
+<%- layout('layouts/main.ejs')  %>
+<div class="row mt-5">
+    <div class="col-6 offset-3">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Error! <%= err.msg %></h4>
+            <p><%= err.stack %></p>
+            <hr>
+            <p class="mb-0">Shut up and go back!!!</p>
+        </div>
+    </div>
+</div>

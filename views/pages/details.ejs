@@ -1,0 +1,63 @@
+<%- layout('layouts/main.ejs')  %>
+<!-- <div class="container mt-2">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="<%= sAd.image %>" alt="">
+                <div class="card-body">
+                    <h4 class="card-title"><%= sAd.title %></h4>
+                    <p class="card-text"><%= sAd.description %></p>
+                </div>
+                <% if(currentUser) {%>
+                    <% if(sAd.postUser) {%>
+                        <% if(sAd.postUser._id.equals(currentUser._id)) {%>
+                            <button class="btn btn-success">Edit</button>
+                        <% } %>
+                    <% } %>
+                <%  }%>
+                
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="row m-5">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <div class="card">
+        <img src="<%= sAd.image[0].url %>" class="card-img-top" alt="..." style="width: 100%; height: 500px; object-fit: cover;">
+        
+        <div class="card-body">
+          <h5 class="card-title"><%= sAd.title %></h5>
+          <hr>
+          <p class="card-text"><%= sAd.description %></p>
+          <hr>
+          <p class="text-muted">Asking Price: $<%= sAd.askingPrice %>.00</p>
+          <hr>
+          <p class="text-muted">Location: <%= sAd.address %></p>
+          <% if(currentUser) {%>
+            <% if(sAd.postUser) {%>
+                <% if(sAd.postUser._id.equals(currentUser._id)) {%>
+                    <div class="btn-group">
+                        <form action="/ads/<%= sAd._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                <% } %>
+            <% } %>
+        <%  }%>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Contact Information</h5>
+          
+          <p class="text-muted">Phone: <%= sAd.phone %></p>
+          <p class="text-muted">Address: <%= sAd.address %></p>
+        </div>
+      </div>
+    </div>
+  </div>

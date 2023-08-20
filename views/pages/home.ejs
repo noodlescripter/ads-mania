@@ -1,0 +1,27 @@
+<%- layout('layouts/main.ejs')  %>
+<%- include('../templates/imageSlider.ejs') %>
+
+<!-- adds -->
+<div class="container px-4 text-center">
+    <div class="row gx-5">
+      <% for(let ad of ads) { %>
+        <div class="col">
+          <div class="p-3">
+            <div class="card" style="width: 18rem;">
+              <img src="<%= ad.image[0].url %>" class="card-img-top" alt="..." style="width: 100%; height: 200px; object-fit: cover;">
+              <!-- <img src="<%= ad.image[0].url %>" class="card-img-top" alt="..." style="width: 100%; height: auto;"> -->
+              <div class="card-body">
+                <h5 class="card-title"><%= ad.title %></h5>
+                <% if (ad.postUser) { %>
+                  <p class="card-text">Posted By: <%= ad.postUser.username %></p>
+                <% } %>
+                <hr>
+                <p class="text-muted">Asking Price: $<%= ad.askingPrice %></p>
+                <a href="/ads/<%= ad._id %>" class="btn btn-primary">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
